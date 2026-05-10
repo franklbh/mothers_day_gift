@@ -21,15 +21,16 @@ const memories = [
   },
   {
     title: '家的感觉',
-    image: '/photos/WechatIMG179112.jpg'
+    image: '/photos/WechatIMG179118.jpg',
+    fullPhoto: true
   },
   {
     title: '日常里的暖',
-    image: '/photos/WechatIMG179113.jpg'
+    image: '/photos/WechatIMG375.jpg'
   },
   {
     title: '一直在身边',
-    image: '/photos/WechatIMG179115.jpg'
+    image: '/photos/5660.JPG'
   }
 ]
 
@@ -127,7 +128,7 @@ function App() {
         </div>
         <div className="memory-grid">
           {memories.map((memory, index) => (
-            <figure className="memory" key={memory.title}>
+            <figure className={`memory ${memory.fullPhoto ? 'full-photo' : ''}`} key={memory.title}>
               <img src={memory.image} alt="" />
               <figcaption>
                 <span>{String(index + 1).padStart(2, '0')}</span>
